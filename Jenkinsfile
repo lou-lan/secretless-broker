@@ -19,7 +19,7 @@ pipeline {
       steps {
         sh './bin/check_style'
 
-        checkstyle pattern: 'test/golint.xml', canComputeNew: true, usePreviousBuildAsReference: false, failedNewAll: "0", failedTotalAll: "0",  unHealthy: "0", healthy: "1", thresholdLimit: "low", useDeltaValues: false
+        junit 'test/golint.xml'
       }
     }
 

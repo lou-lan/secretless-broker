@@ -11,6 +11,7 @@ ROOT_DIR_LENGTH=${#PROJECT_ROOT}
 output_xml() {
   style_errs="${1}"
 
+  echo '<?xml version="1.0" encoding="UTF-8"?>'
   echo "<checkstyle>"
   if [[ ! -z "$style_errs" ]]; then
     current_file=""
